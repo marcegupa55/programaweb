@@ -12,37 +12,43 @@
 
 </head>
 <body class="fixedd">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Inicio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="administra.html">Administrador</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn">Inventario 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="consultapro.html">Consulta de productos</a>
+        <a href="ingresoproducto.html">Ingreso de productos</a>
+        <a href="actualizarprodu.html">Actualizar productos</a>
+        <a href="eliminarprodu.html">Eliminar productos</a>
+      </div>
+    </div> 
+    <a href="Inventario.html">Utilidades</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  
+  <div style="padding-left:16px">
+    <h2>Responsive Topnav with Dropdown</h2>
+    <p>Resize the browser window to see how it works.</p>
+    <p>Hover over the dropdown button to open the dropdown menu.</p>
+  </div>
 
-        <ul class="navbar-nav mr-auto">
-        
-          <li class="nav-item active"> 
-            <a class="nav-link" href="administra.html"> Administrador </a>
-          </li>
-          <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Inventario </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="consultapro.html"> Consulta de productos </a>
-                <a class="dropdown-item" href="ingresoproducto.html"> Ingreso de productos </a>
-                <a class="dropdown-item" href="actualizarprodu.html"> Actualizar productos </a>
-                <a class="dropdown-item" href="eliminarprodu.html"> Eliminar productos </a>
-              </div>
-              
-          </li>
-          <li class="nav-item"> 
-            <a class="nav-link" href="Inventario.html"> Utilidades </a>
-           </li>
-          
-          </ul>
-          
-     
-    </div>
-  </nav>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <script type="text/javascript" src="js\jquery.js"></script>
+        <script type="text/javascript" src="js\bootstrap.min.js"></script>
 
 		<script type="text/javascript" src="js\jquery.js"></script>
 		<script type="text/javascript" src="js\bootstrap.min.js"></script>
